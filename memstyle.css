@@ -1,0 +1,175 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+
+* {
+    font-family: 'Nunito', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+   
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eee;
+}
+
+.slide-container{
+    max-width: 1120px;
+    width: 100%;
+    background-color: gainsboro;
+    padding: 40px 0;
+}
+
+
+.slide-content{
+   
+    margin: 0 40px;
+    background-color: #eee;
+overflow: hidden;
+border-radius: 25px;
+}
+
+
+.card{
+   
+    border-radius: 25px;
+    background: grey;
+}
+
+.image-content, .card-content{
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 10px 14px;
+}
+
+.image-content{
+    position: relative;
+    row-gap: 5px;
+    padding: 25px 0;
+}
+
+.overlay{
+    position: absolute;
+    left: 0; top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: blue;
+    border-radius: 25px 25px 0 25px;
+}
+
+.overlay::before, .overlay::after{
+content: '';
+position: absolute;
+right: 0;
+bottom: -40px;
+height: 40px;
+width: 40px;
+background-color: blue;
+}
+
+.overlay::after{
+    border-radius: 0 25px 0 0;
+background-color: gray;
+
+}
+
+
+.card-image{
+    position: relative;
+    height: 150px;
+    width: 150px;
+border-radius: 50%;
+background: #ffff;
+padding:1rem
+}
+
+.card-image .card-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+border: 4px solid black;
+}
+
+.name{
+font-size: 18px;
+font-weight: 500;
+color: purple;
+}
+
+.description{
+    font-size: 14px;
+    color: aliceblue;
+
+}
+
+.button{
+    border: none;
+    font-size: 16px;
+    color:aliceblue;
+    padding: 8px 16px;
+    background-color: pink;
+    border-radius: 6px;
+    margin: 14px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+.button:hover{
+    background: lightpink;
+
+}
+
+.swipper-navBtn{
+    color: darkblue;
+    transition: color 0.3s ease;
+}
+
+.swipper-navBtn:hover{
+    color: blue;
+}
+
+.swipper-navBtn::before,
+.swipper-navBtn::after{
+    font-size: 40px;
+}
+
+.swiper-button-next{
+right: 0;
+}
+
+.swiper-button-prev{
+left: 0;
+
+}
+
+.swiper-pagination.bullet{
+
+    background-color: blanchedalmond;
+    opacity: 1;
+}
+
+
+.swiper-pagination.bullet-active{
+    background-color: aquamarine;
+}
+
+
+
+
+
+
+@media screen and (max-width: 768px){
+    .slide-content{
+        margin: 0 10px;
+    }
+    .swipper-navBtn{
+        display: none;
+
+    }
+
+}
